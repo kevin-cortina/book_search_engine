@@ -136,9 +136,9 @@ You’ll need to complete the following tasks in each of these back-end files:
 
 	* `typeDefs.js`: Define the necessary `Query` and `Mutation` types:
 
-		* `Query` type:
+		<!-- * `Query` type:
 
-			* `me`: Which returns a `User` type.
+			* `me`: Which returns a `User` type. -->
 		
 		* `Mutation` type:
 
