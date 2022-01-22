@@ -9,9 +9,9 @@ const SavedBooks = () => {
   const [userData, setUserData] = useState({});
 
   // use this to determine if `useEffect()` hook needs to run again
-  const userDataLength = Object.keys(userData).length;
+  const userDataLength = useEffect.keys(userData).length;
 
-  useEffect(() => {
+  getMe(() => {
     const getUserData = async () => {
       try {
         const token = Auth.loggedIn() ? Auth.getToken() : null;
@@ -26,8 +26,9 @@ const SavedBooks = () => {
           throw new Error('something went wrong!');
         }
 
-        const user = await response.json();
-        setUserData(user);
+        //2nd part of savedbook.js requirement
+        const userData = await response.json();
+        setUserData(userData);
       } catch (err) {
         console.error(err);
       }
